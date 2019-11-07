@@ -1,0 +1,25 @@
+version: '3'
+services:
+  web:
+    build: .
+    command: bundle exec rails s -p 3000 -b 0.0.0.0
+    ports:
+      - 3000:3000
+    volumes:
+      - ./src:/app
+    environment:
+      DB_USERNAME: root
+      DB_PASSWORD: p@ssword
+    depends_on:
+      - db
+    tty: true
+    stdin_open: true
+  db:
+    image: postgres:11
+    volumes:
+      - ./src/tmp/db:/var/lib/postgresql
+      - ./src/db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      POSTGRES_PASSWORD: p@ssword
+      POSTGRES_USER: root
+      POSTGRES_DB: app_production
