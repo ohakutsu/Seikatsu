@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uuid: 893bccac-a713-4c08-a7e3-f5e601598e28
+  title: サンプルタイトル
+  body: これが本文これが本文これが本文これが本文
+  user_id: 1
+
+two:
+  uuid: 1ce16bdf-5c58-4803-843f-90940162ab49
+  title: sample title
+  body: this is body. this is body.
+  user_id: 2
