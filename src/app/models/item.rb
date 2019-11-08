@@ -10,4 +10,5 @@ class Item < ApplicationRecord
     minimum: 1,
     maximum: 5000
   }
+  validates :user_id, presence: true
 end
