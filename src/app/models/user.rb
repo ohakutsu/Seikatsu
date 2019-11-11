@@ -1,5 +1,9 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   has_many :items, dependent: :destroy
+  has_many :votes, dependent: :destroy
+  has_many :voted_items, through: :votes, source: :item
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
