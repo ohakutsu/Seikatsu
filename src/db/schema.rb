@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -13,11 +11,11 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 2019_11_11_030945) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "items", force: :cascade do |t|
-    t.string "uuid", null: false
     t.string "title", null: false
     t.text "body", null: false
     t.bigint "user_id", null: false
@@ -27,7 +25,6 @@ ActiveRecord::Schema.define(version: 2019_11_11_030945) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "uuid", null: false
     t.string "name", null: false
     t.string "description"
     t.string "image_url"
