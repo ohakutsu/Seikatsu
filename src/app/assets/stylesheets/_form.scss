@@ -1,0 +1,41 @@
+.item-form {
+  .item-form__title {
+    padding: 5px;
+    width: 100%;
+    font-size: 1.5rem;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    @media (min-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+
+  .item-form__about-markdown {
+    margin: 10px 0 5px 5px;
+    font-size: 1rem;
+  }
+
+  .item-form__body {
+    padding: 5px;
+    width: 100%;
+    height: 500px;
+    font-size: 1.1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+  }
+  .item-form__body:focus {
+    outline: transparent;
+  }
+
+  .item-form__submit {
+    margin: 20px 0;
+    text-align: center;
+    .item-form__submit_btn {
+      width: 100%;
+      @media (min-width: 768px) {
+        max-width: 200px;
+      }
+      font-size: 1.25rem;
+    }
+  }
+}

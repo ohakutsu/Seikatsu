@@ -1,12 +1,14 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.item-main {
+.item-main, .item-form {
   margin: 10px 0;
   padding: 10px;
   font-size: 0;
   border: 1px solid #dee2e6;
+}
 
+.item-main {
   .item-main__header{
     display: flex;
     justify-content: space-between;
@@ -44,6 +46,10 @@
         font-size: 2.5rem;
       }
     }
+    .body_buttons {
+      display: flex;
+      justify-content: space-between;
+    }
     .body_vote-btn {
       color: #43a047;
       background-color: #fff;
@@ -58,6 +64,9 @@
       color: #fff;
       background-color: #43a047;
       border-color: #43a047;
+    }
+    .body_edit-btn {
+      margin-right: 10px;
     }
     .markdown {
       padding-top: 20px;
