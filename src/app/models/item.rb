@@ -2,7 +2,7 @@
 
 class Item < ApplicationRecord
   class << self
-    def week_ranking()
+    def week_ranking
       a_week_ago = Time.current - 60*60*24*7
       rel = where("items.created_at >= ?", a_week_ago)
       rel = rel.joins(:votes).group(:id, "votes.item_id").order("count(votes.item_id) desc").limit(10)
