@@ -14,3 +14,8 @@
  *= require_self
  */
  @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+ .main {
+   margin: 0 auto;
+   max-width: 750px;
+ }
