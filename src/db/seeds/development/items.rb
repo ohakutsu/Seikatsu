@@ -10,8 +10,8 @@ body = "\u30B5\u30F3\u30D7\u30EB\u672C\u6587\u30B5\u30F3\u30D7\u30EB\u672C\u6587
 
 0.upto(3) do |i|
   Item.create(
-    title: titles[i % 3],
+    title: titles[i % 4],
     body: body,
-    user_id: i % 3 + 1
+    user_id: (i % 3) + 1
   )
 end
