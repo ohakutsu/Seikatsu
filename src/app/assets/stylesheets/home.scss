@@ -1,15 +1,24 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.ranking {
+.ranking, .latest {
   margin-top: 10px;
   padding: 10px;
   border: 1px solid #dee2e6;
+
+  .nav-item {
+    .nav-link.active {
+      color: #1b5e20;
+    }
+    .nav-link.unactive {
+      color: #495057;
+    }
+  }
 }
 
-.ranking-items {
+.ranking-items, .latest-items {
   font-size: 0;
-  
+
   .item {
     padding: 10px;
     border-bottom: 1px solid #dee2e6;
