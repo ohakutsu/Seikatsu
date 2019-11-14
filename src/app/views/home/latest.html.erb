@@ -1,0 +1,19 @@
+<section class="latest">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <%= link_to "週間ランキング", :root, class: "nav-link unactive" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to "最新の記事", :latest, class: "nav-link active" %>
+    </li>
+  </ul>
+  <div class="latest-items">
+    <% if @latest_items.present? %>
+      <% @latest_items.each do |item| %>
+        <%= render("shared/item", item: item) %>
+      <% end %>
+    <% else %>
+      <p class="not-found">記事がありません</p>
+    <% end %>
+  </div>
+</section>
