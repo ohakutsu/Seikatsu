@@ -1,10 +1,10 @@
 <section class="ranking">
   <ul class="nav nav-tabs">
     <li class="nav-item">
-      <a class="nav-link active" href="#">週間いいねランキング</a>
+      <%= link_to "週間いいねランキング", :root, class: "nav-link active" %>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">最新の記事</a>
+      <%= link_to "最新の記事", :latest, class: "nav-link" %>
     </li>
   </ul>
   <div class="ranking-items">
@@ -13,7 +13,7 @@
         <%= render("shared/item", item: item) %>
       <% end %>
     <% else %>
-      <p class="ranking-items__not-found">いいねがついている記事がありません</p>
+      <p class="not-found">いいねがついている記事がありません</p>
     <% end %>
   </div>
 </section>
