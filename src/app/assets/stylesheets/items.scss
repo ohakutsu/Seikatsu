@@ -1,3 +1,66 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.item-main {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 0;
+  border: 1px solid #dee2e6;
+
+  .item-main__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 1rem;
+      color: #444;
+
+      .header_user-img {
+        margin-right: 5px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+    }
+    .header_updated-at {
+      font-size: 1rem;
+      color: #495057;
+    }
+  }
+  .item-main__body {
+    padding: 20px 5px;
+    @media (min-width: 768px) {
+      padding: 20px;
+    }
+
+    .body_title {
+      font-size: 1.75rem;
+      color: #444;
+      @media (min-width: 768px) {
+        font-size: 2.5rem;
+      }
+    }
+    .body_vote-btn {
+      color: #43a047;
+      background-color: #fff;
+      border-color: #43a047;
+    }
+    .body_vote-btn:hover {
+      color: #fff;
+      background-color: #43a047;
+      border-color: #43a047;
+    }
+    .body_vote-btn-active {
+      color: #fff;
+      background-color: #43a047;
+      border-color: #43a047;
+    }
+    .markdown {
+      padding-top: 20px;
+    }
+  }
+}

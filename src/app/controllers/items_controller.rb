@@ -2,9 +2,11 @@
 
 class ItemsController < ApplicationController
   def index
+    redirect_to :root
   end
 
   def show
+    @item = Item.find_by_hashid(params[:id])
   end
 
   def new
