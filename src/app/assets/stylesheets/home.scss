@@ -1,0 +1,47 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.ranking {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #dee2e6;
+}
+
+.ranking-items {
+  font-size: 0;
+
+  .ranking-items__item {
+    padding: 10px;
+    border-bottom: 1px solid #dee2e6;
+
+    .ranking-items__item_user a {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 1rem;
+      color: #444;
+    }
+    .ranking-items__item_user-img {
+      margin-right: 5px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+
+    .ranking-items__item_title {
+      color: rgba(0, 0, 0, 0.9);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .ranking-items__item_released-at {
+      margin-right: 10px;
+      font-size: 1rem;
+      color: #444;
+    }
+    .ranking-items__item_votes {
+      font-size: 1rem;
+      color: #444;
+    }
+
+  }
+}
