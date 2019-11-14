@@ -1,0 +1,19 @@
+<div class="item">
+  <div class="item_user">
+    <%= link_to item.user do %>
+      <% if item.user.image_url.present? %>
+        <img class="item_user-img" src="<%= item.user.image_url %>">
+      <% else %>
+        <img class="item_user-img" src="https://4.bp.blogspot.com/-xz7m7yMI-CI/U1T3vVaFfZI/AAAAAAAAfWI/TOJPmuapl-c/s800/figure_standing.png">
+      <% end %>
+      <span class="item_user-name"><%= item.user.name %></span>
+    <% end %>
+  </div>
+  <div>
+    <%= link_to item.title, item, class: "item_title" %>
+  </div>
+  <div>
+    <span class="item_released-at">公開日 <%= item.created_at.strftime("%Y年%m月%d日") %></span>
+    <span class="item_votes">いいね <%= item.votes.length %></span>
+  </div>
+</div>

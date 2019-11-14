@@ -1,0 +1,19 @@
+<section class="ranking">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">週間いいねランキング</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">最新の記事</a>
+    </li>
+  </ul>
+  <div class="ranking-items">
+    <% if @ranking_items.present? %>
+      <% @ranking_items.each do |item| %>
+        <%= render("shared/item", item: item) %>
+      <% end %>
+    <% else %>
+      <p class="ranking-items__not-found">いいねがついている記事がありません</p>
+    <% end %>
+  </div>
+</section>

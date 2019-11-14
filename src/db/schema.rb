@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 2019_11_11_030945) do
   enable_extension "plpgsql"
 
   create_table "items", force: :cascade do |t|
-    t.string "uuid", null: false
     t.string "title", null: false
     t.text "body", null: false
     t.bigint "user_id", null: false
@@ -27,7 +26,6 @@ ActiveRecord::Schema.define(version: 2019_11_11_030945) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "uuid", null: false
     t.string "name", null: false
     t.string "description"
     t.string "image_url"
