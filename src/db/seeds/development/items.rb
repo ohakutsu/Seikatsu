@@ -10,7 +10,6 @@ body = "\u30B5\u30F3\u30D7\u30EB\u672C\u6587\u30B5\u30F3\u30D7\u30EB\u672C\u6587
 
 0.upto(3) do |i|
   Item.create(
-    uuid: SecureRandom.uuid,
     title: titles[i % 3],
     body: body,
     user_id: i % 3 + 1
