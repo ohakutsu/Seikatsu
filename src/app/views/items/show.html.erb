@@ -1,0 +1,26 @@
+<section class="item-main">
+  <div class="item-main__header">
+    <%= link_to @item.user do %>
+      <% if @item.user.image_url.present? %>
+        <img class="header_user-img" src="<%= @item.user.image_url %>">
+      <% else %>
+        <img class="header_user-img" src="https://4.bp.blogspot.com/-xz7m7yMI-CI/U1T3vVaFfZI/AAAAAAAAfWI/TOJPmuapl-c/s800/figure_standing.png">
+      <% end %>
+      <span class="header_user-name"><%= @item.user.name %></span>
+    <% end %>
+    <span class="header_updated-at"><%= @item.updated_at.strftime("%Y年%m月%d日") %>に更新</span>
+  </div>
+  <div class="item-main__body">
+    <h1 class="body_title"><%= @item.title %></h1>
+    <div class="body_buttons">
+      <%= link_to "いいね #{@item.votes.length}", "#", class: "btn body_vote-btn" %>
+      <div>
+        <%= link_to "編集", [:edit, @item], class: "body_edit-btn btn btn-secondary" %>
+        <%= link_to "削除", @item, method: :delete, data: { confirm: "本当に削除しますか？" }, class: "btn btn-danger" %>
+      </div>
+    </div>
+    <div class="markdown">
+      <%= markdown_to_html(@item.body) %>
+    </div>
+  </div>
+</section>

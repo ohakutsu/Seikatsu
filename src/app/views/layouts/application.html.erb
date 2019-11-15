@@ -16,6 +16,12 @@
     <%= render "shared/header" %>
     <main>
       <div class="main container">
+        <% if flash.notice %>
+          <div class="notice alert alert-success" role="alert">
+            <%= flash.notice %>
+          </div>
+        <% end %>
+
         <%= yield %>
       </div>
     </main>

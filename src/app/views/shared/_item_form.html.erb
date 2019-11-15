@@ -1,0 +1,12 @@
+<section class="item-form">
+  <%= form_for item do |form| %>
+    <%= form.text_field :title, class: "item-form__title", placeholder: "タイトル（30文字以内）" %>
+    <div class="item-form__about-markdown">
+      <%= link_to "Markdownの書き方", :root, target: :_blank%>
+    </div>
+    <%= form.text_area :body, class: "item-form__body", placeholder: "Markdown記法で記事を書く" %>
+    <div class="item-form__submit">
+      <%= form.submit btn, class: "btn btn-success item-form__submit_btn" %>
+    </div>
+  <% end %>
+</section>
