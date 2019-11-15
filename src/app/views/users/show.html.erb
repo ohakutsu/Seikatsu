@@ -19,6 +19,9 @@
       <% @user_items.each do |user_item| %>
           <%= render("shared/item", item: user_item) %>
       <% end %>
+      <div class="paginate">
+        <%= paginate @user_items %>
+      </div>
     <% else %>
       <p class="not-found">投稿された記事はありません</p>
     <% end %>
