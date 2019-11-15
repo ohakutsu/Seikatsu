@@ -3,8 +3,12 @@
     padding-bottom: 10px;
     border-bottom: 1px solid #dee2e6;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1.75rem;
     color: #444;
+
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+    }
   }
 
   form {
@@ -15,5 +19,11 @@
       margin-top: 20px;
       width: 100%;
     }
+  }
+
+  ul {
+    margin: 20px auto 0;
+    padding-left: 20px;
+    max-width: 400px;
   }
 }
