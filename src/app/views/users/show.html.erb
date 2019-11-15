@@ -1,0 +1,26 @@
+<% @page_title = @user.name %>
+
+<section class="user-main tile">
+  <div class="user-main__about">
+    <img class="about_img" src="https://4.bp.blogspot.com/-xz7m7yMI-CI/U1T3vVaFfZI/AAAAAAAAfWI/TOJPmuapl-c/s800/figure_standing.png">
+    <div>
+      <h1 class="about_name"><%= @user.name %></h1>
+      <p class="about_desc"><%= @user.description %></p>
+    </div>
+  </div>
+  <div class="user-main__items">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <%= link_to "#{@user.name}さんの記事", @user, class: "nav-link active" %>
+      </li>
+    </ul>
+
+    <% if @user_items.present? %>
+      <% @user_items.each do |user_item| %>
+          <%= render("shared/item", item: user_item) %>
+      <% end %>
+    <% else %>
+      <p class="not-found">投稿された記事はありません</p>
+    <% end %>
+  </div>
+</section>
