@@ -14,10 +14,12 @@
     <h1 class="body_title"><%= @item.title %></h1>
     <div class="body_buttons">
       <%= link_to "いいね #{@item.votes.length}", "#", class: "btn body_vote-btn" %>
-      <div>
-        <%= link_to "編集", [:edit, @item], class: "body_edit-btn btn btn-secondary" %>
-        <%= link_to "削除", @item, method: :delete, data: { confirm: "本当に削除しますか？" }, class: "btn btn-danger" %>
-      </div>
+      <% if is_auther?(@item) %>
+        <div>
+          <%= link_to "編集", [:edit, @item], class: "body_edit-btn btn btn-secondary" %>
+          <%= link_to "削除", @item, method: :delete, data: { confirm: "本当に削除しますか？" }, class: "btn btn-danger" %>
+        </div>
+      <% end %>
     </div>
     <div class="markdown">
       <%= markdown_to_html(@item.body) %>
