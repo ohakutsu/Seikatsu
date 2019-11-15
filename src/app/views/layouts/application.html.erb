@@ -21,6 +21,11 @@
             <%= flash.notice %>
           </div>
         <% end %>
+        <% if flash.alert %>
+          <div class="alert alert alert-danger" role="alert">
+            <%= flash.alert %>
+          </div>
+        <% end %>
 
         <%= yield %>
       </div>
