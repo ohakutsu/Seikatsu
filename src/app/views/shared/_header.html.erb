@@ -1,7 +1,7 @@
 <header class="header">
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-      <a class="navbar-brand" href="#">Seikatsu</a>
+      <%= link_to "Seikatsu", :root, class: "navbar-brand" %>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -9,19 +9,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/">ホーム</a>
+            <%= link_to "ホーム", :root, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">投稿する</a>
+            <%= link_to "投稿する", [:new, :item], class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">下書き一覧</a>
+            <%= link_to "マイページ", "#", class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">マイページ</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">設定</a>
+            <%= link_to "設定", "#", class: "nav-link" %>
           </li>
         </ul>
       </div>
