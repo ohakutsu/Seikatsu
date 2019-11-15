@@ -1,3 +1,99 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.user-main {
+  .user-main__about {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .about_img {
+      margin-right: 5px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+    .about_name {
+      margin-bottom: 5px;
+      font-size: 1.75rem;
+      color: #444;
+    }
+    .about_desc {
+      margin: 0;
+      font-size: 1rem;
+      color: #444;
+    }
+    @media (min-width: 768px) {
+      .about_img {
+        margin-right: 10px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+      .about_name {
+        font-size: 2.5rem;
+        color: #444;
+      }
+      .about_desc {
+        margin: 0;
+        font-size: 1.1rem;
+        color: #444;
+      }
+    }
+  }
+  .user-main__items {
+    margin-top: 15px;
+    @media (min-width: 768px) {
+      margin-top: 30px;
+    }
+
+    .nav-item {
+      .nav-link.active {
+        color: #1b5e20;
+      }
+      .nav-link.unactive {
+        color: #495057;
+      }
+    }
+
+    .item {
+      padding: 10px;
+      border-bottom: 1px solid #dee2e6;
+      font-size: 0;
+
+      .item_user a {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 1rem;
+        color: #444;
+      }
+      .item_user-img {
+        margin-right: 5px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+
+      .item_title {
+        color: rgba(0, 0, 0, 0.9);
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+      .item_released-at {
+        margin-right: 10px;
+        font-size: 1rem;
+        color: #444;
+      }
+      .item_votes {
+        font-size: 1rem;
+        color: #444;
+      }
+    }
+
+    .not-found {
+      margin: 10px;
+      font-size: 1.2rem;
+    }
+  }
+}
