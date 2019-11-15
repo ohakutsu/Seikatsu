@@ -1,3 +1,5 @@
 <% @page_title = "記事編集" %>
 
+<%= render "shared/errors", obj: @item %>
+
 <%= render "shared/item_form", {item: @item, btn: "更新"} %>

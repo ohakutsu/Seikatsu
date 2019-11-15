@@ -1,0 +1,17 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+      item: 記事
+      vote: いいね
+    attributes:
+      user:
+        id: ID
+        name: ユーザー名
+        description: 説明
+        password: パスワード
+      item:
+        id: ID
+        user: ユーザーID
+        title: タイトル
+        body: 本文
