@@ -1,0 +1,28 @@
+<% @page_title = @user.name %>
+
+<section class="user-main tile">
+  
+  <%= render("shared/user", user: @user) %>
+
+  <div class="user-main__items">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <%= link_to "投稿した記事", @user, class: "nav-link unactive" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "いいねした記事", [:voted, @user], class: "nav-link active" %>
+      </li>
+    </ul>
+
+    <% if @user_voted_items.present? %>
+      <% @user_voted_items.each do |user_voted_item| %>
+          <%= render("shared/item", item: user_voted_item) %>
+      <% end %>
+      <div class="paginate">
+        <%= paginate @user_voted_items %>
+      </div>
+    <% else %>
+      <p class="not-found">いいねした記事はありません</p>
+    <% end %>
+  </div>
+</section>
