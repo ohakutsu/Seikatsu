@@ -10,9 +10,12 @@ class Item < ApplicationRecord
     end
 
     def search(query)
-      rel = joins(:votes).group(:id, "votes.item_id").order("count(votes.item_id) desc")
+      rel = order(created_at: :desc)
       if query.present?
-        rel = rel.where("title LIKE ? OR body LIKE ?", "%#{query}%", "%#{query}%")
+        queries = query.split
+        queries.each do |q|
+          rel = rel.where("title LIKE ? OR body LIKE ?", "%#{q}%", "%#{q}%")
+        end
       end
       rel
     end
