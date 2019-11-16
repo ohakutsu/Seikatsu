@@ -4,7 +4,7 @@
       <% if item.user.profile_image.attached? %>
         <%= image_tag item.user.profile_image.variant(resize: "100x100"), class: "item_user-img" %>
       <% else %>
-        <img class="item_user-img" src="https://4.bp.blogspot.com/-xz7m7yMI-CI/U1T3vVaFfZI/AAAAAAAAfWI/TOJPmuapl-c/s800/figure_standing.png">
+        <%= image_tag "user.png", class: "item_user-img" %>
       <% end %>
       <span class="item_user-name"><%= item.user.name %></span>
     <% end %>
