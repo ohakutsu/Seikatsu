@@ -1,0 +1,16 @@
+<section class="search tile">
+  <h1 class="search__title">"<%= @query %>" の検索結果 - <%= @items.length %>件</h1>
+
+  <div class="search-items">
+    <% if @items.present? %>
+      <% @items.each do |item| %>
+        <%= render("shared/item", item: item) %>
+      <% end %>
+      <div class="paginate">
+        <%= paginate @items %>
+      </div>
+    <% else %>
+      <p class="not-found">記事が見つかりませんでした</p>
+    <% end %>
+  </div>
+</section>

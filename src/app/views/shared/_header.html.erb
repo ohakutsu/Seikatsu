@@ -33,6 +33,10 @@
             </li>
           <% end %>
         </ul>
+        <%= form_tag :search_items, method: :get, class: "header__search form-inline my-2 my-lg-0" do %>
+          <%= text_field_tag "query", params[:query], class: "header__search_input form-control mr-sm-2", placeholder: "キーワードを入力" %>
+          <%= submit_tag "検索", class: "header__search_submit btn btn-primary my-2 my-sm-0" %>
+        <% end %>
       </div>
     </div>
   </nav>

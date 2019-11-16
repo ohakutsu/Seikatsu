@@ -47,6 +47,12 @@ class ItemsController < ApplicationController
     redirect_to :items, notice: "記事を削除しました"
   end
 
+  def search
+    @query = params[:query]
+    @items = Item.search(@query).page(params[:page]).per(10)
+    render "search"
+  end
+
   def like
     @item = Item.find_by_hashid(params[:id])
     current_user.voted_items << @item

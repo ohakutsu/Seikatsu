@@ -8,6 +8,14 @@ class Item < ApplicationRecord
       rel = rel.joins(:votes).group(:id, "votes.item_id").order("count(votes.item_id) desc").limit(10)
       rel
     end
+
+    def search(query)
+      rel = joins(:votes).group(:id, "votes.item_id").order("count(votes.item_id) desc")
+      if query.present?
+        rel = rel.where("title LIKE ? OR body LIKE ?", "%#{query}%", "%#{query}%")
+      end
+      rel
+    end
   end
 
   belongs_to :user

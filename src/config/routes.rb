@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   root "home#index"
   get "latest" => "home#latest"
   resources :items do
+    get "search", on: :collection
     patch "like", "unlike", on: :member
   end
   resources :users, only: [:show, :voted] do

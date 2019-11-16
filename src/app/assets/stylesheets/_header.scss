@@ -2,4 +2,15 @@
   nav {
     background-color: #a5d6a7;
   }
+
+  @media (max-width: 767px) {
+    .header__search{
+      .header__search_input {
+        width: 80%;
+      }
+      .header__search_submit {
+        width: 20%;
+      }
+    }
+  }
 }
