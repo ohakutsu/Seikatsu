@@ -8,9 +8,11 @@ Rails.application.routes.draw do
 
   root "home#index"
   get "latest" => "home#latest"
-  resources :items do 
+  resources :items do
     patch "like", "unlike", on: :member
   end
-  resources :users, only: [:show]
+  resources :users, only: [:show, :voted] do
+    get "voted", on: :member
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
