@@ -24,6 +24,9 @@ ja:
               too_long: "は%{count}文字以下に設定して下さい。"
               invalid: "は有効でありません。"
               confirmation: "が内容とあっていません。"
+            new_profile_image:
+              invalid: "は有効でありません。"
+              invalid_image_type: "はJPEG, PNG, GIF, PNG形式の画像を指定してください。"
     attributes:
       user:
         current_password: "現在のパスワード"
