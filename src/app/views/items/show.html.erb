@@ -13,7 +13,11 @@
   <div class="item-main__body">
     <h1 class="body_title"><%= @item.title %></h1>
     <div class="body_buttons">
-      <%= link_to "いいね #{@item.votes.length}", "#", class: "btn body_vote-btn" %>
+      <% if is_votable?(@item) %>
+        <%= link_to "いいね #{@item.votes.length}", [:like, @item], method: :patch, class: "btn body_vote-btn" %>
+      <% else %>
+        <%= link_to "いいね #{@item.votes.length}", [:unlike, @item], method: :patch, class: "btn body_vote-btn-active" %>
+      <% end %>
       <% if is_auther?(@item) %>
         <div>
           <%= link_to "編集", [:edit, @item], class: "body_edit-btn btn btn-secondary" %>

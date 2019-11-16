@@ -8,4 +8,12 @@ module ItemsHelper
       false
     end
   end
+
+  def is_votable?(item)
+    if current_user.present?
+      !current_user.voted_items.exists?(id: item.id)
+    else
+      true
+    end
+  end
 end
