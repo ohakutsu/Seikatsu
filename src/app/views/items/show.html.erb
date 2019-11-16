@@ -1,8 +1,8 @@
 <section class="item-main tile">
   <div class="item-main__header">
     <%= link_to @item.user do %>
-      <% if @item.user.image_url.present? %>
-        <img class="header_user-img" src="<%= @item.user.image_url %>">
+      <% if @item.user.profile_image.attached? %>
+        <%= image_tag @item.user.profile_image.variant(resize: "100x100"), class: "header_user-img" %>
       <% else %>
         <img class="header_user-img" src="https://4.bp.blogspot.com/-xz7m7yMI-CI/U1T3vVaFfZI/AAAAAAAAfWI/TOJPmuapl-c/s800/figure_standing.png">
       <% end %>

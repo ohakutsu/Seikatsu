@@ -4,6 +4,8 @@ class User < ApplicationRecord
   has_many :items, dependent: :destroy
   has_many :votes, dependent: :destroy
   has_many :voted_items, through: :votes, source: :item
+  has_one_attached :profile_image
+  attribute :new_profile_image
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -18,4 +20,10 @@ class User < ApplicationRecord
   validates :description, length: {
     maximum: 50
   }
+
+  before_save do
+    if new_profile_image
+      self.profile_image = new_profile_image
+    end
+  end
 end
