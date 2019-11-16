@@ -12,6 +12,9 @@
       <% @latest_items.each do |item| %>
         <%= render("shared/item", item: item) %>
       <% end %>
+      <div class="paginate">
+        <%= paginate @latest_items %>
+      </div>
     <% else %>
       <p class="not-found">記事がありません</p>
     <% end %>

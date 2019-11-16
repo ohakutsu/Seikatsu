@@ -8,11 +8,6 @@ class Item < ApplicationRecord
       rel = rel.joins(:votes).group(:id, "votes.item_id").order("count(votes.item_id) desc").limit(10)
       rel
     end
-
-    def latest
-      rel = order(created_at: :desc).limit(10)
-      rel
-    end
   end
 
   belongs_to :user

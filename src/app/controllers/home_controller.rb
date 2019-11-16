@@ -6,6 +6,6 @@ class HomeController < ApplicationController
   end
 
   def latest
-    @latest_items = Item.latest()
+    @latest_items = Item.all.order(created_at: :desc).page(params[:page]).per(10)
   end
 end
