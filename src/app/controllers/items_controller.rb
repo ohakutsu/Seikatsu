@@ -2,7 +2,7 @@
 
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :create, :update, :destroy, :like, :unlike]
-  
+
   def index
     redirect_to :root
   end
