@@ -1,5 +1,9 @@
 <div class="user-main__about">
-  <img class="about_img" src="https://4.bp.blogspot.com/-xz7m7yMI-CI/U1T3vVaFfZI/AAAAAAAAfWI/TOJPmuapl-c/s800/figure_standing.png">
+  <% if user.profile_image.attached? %>
+    <%= image_tag user.profile_image.variant(resize: "100x100"), class: "about_img" %>
+  <% else %>
+    <img class="about_img" src="https://4.bp.blogspot.com/-xz7m7yMI-CI/U1T3vVaFfZI/AAAAAAAAfWI/TOJPmuapl-c/s800/figure_standing.png">
+  <% end %>
   <div>
     <h1 class="about_name"><%= user.name %></h1>
     <p class="about_desc"><%= user.description %></p>

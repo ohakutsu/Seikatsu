@@ -15,8 +15,8 @@
     </ul>
 
     <% if @user_voted_items.present? %>
-      <% @user_voted_items.each do |user_voted_item| %>
-          <%= render("shared/item", item: user_voted_item) %>
+      <% @user_voted_items.each do |item| %>
+          <%= render("shared/item", item: item) %>
       <% end %>
       <div class="paginate">
         <%= paginate @user_voted_items %>
