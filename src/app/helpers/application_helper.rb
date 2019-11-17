@@ -18,7 +18,9 @@ module ApplicationHelper
       autolink: true,
       space_after_headers: true,
       fenced_code_blocks: true,
-      disable_indented_code_blocks: true
+      disable_indented_code_blocks: true,
+      tables: true,
+      image: true
     }
 
     renderer = Redcarpet::Render::HTML.new(options)

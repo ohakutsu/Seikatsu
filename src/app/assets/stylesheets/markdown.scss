@@ -51,6 +51,23 @@
       border-radius: 0;
     }
   }
+
+  table {
+    margin: 16px 0;
+
+    thead {
+      background-color: #dee2e6;
+    }
+    th, td {
+      padding: 8px 10px;
+      border: 1px solid #aaa;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    margin: 16px 0;
+  }
   @media (min-width: 768px) {
     h1 {
       padding-left: 10px;
