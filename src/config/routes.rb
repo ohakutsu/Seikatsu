@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   root "home#index"
   get "latest" => "home#latest"
+  get "about" => "home#about"
   resources :items do
     get "search", on: :collection
     patch "like", "unlike", on: :member
