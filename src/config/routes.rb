@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   root "home#index"
   get "latest" => "home#latest"
   get "about" => "home#about"
+  get "contact" => "home#contact"
   get "markdown_example" => "home#markdown_example"
   resources :items do
     get "search", on: :collection
