@@ -11,4 +11,7 @@ class HomeController < ApplicationController
 
   def about
   end
+
+  def markdown_example
+  end
 end
