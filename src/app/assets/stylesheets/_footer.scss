@@ -1,0 +1,23 @@
+.footer {
+  margin-top: 50px;
+
+  .footer__list {
+    text-align: right;
+    .footer__list_item {
+      list-style: none;
+      letter-spacing: 1px;
+
+      @media (min-width: 768px) {
+        display: inline-block;
+        padding: 0 3px;
+      }
+      a {
+        color: #444;
+      }
+    }
+  }
+  .footer__copyright {
+    text-align: center;
+    color: #444;
+  }
+}
