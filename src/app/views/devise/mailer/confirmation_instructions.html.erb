@@ -1,5 +1,5 @@
-<p>Welcome <%= @email %>!</p>
+<p>Seikatsuへようこそ、<%= @email %>!</p>
 
-<p>You can confirm your account email through the link below:</p>
+<p>以下のリンクをクリックすると本人確認が完了します。</p>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+<p><%= link_to '確認を完了する', confirmation_url(@resource, confirmation_token: @token) %></p>
