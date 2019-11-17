@@ -52,14 +52,6 @@
       <%= f.password_field :password_confirmation, class: "form-control", placeholder: "もう一度新しいパスワードを入力" %>
     </div>
 
-    <hr>
-
-    <div class="form-group current-password">
-      <%= f.label :current_password %>
-      <%= f.password_field :current_password, class: "form-control", placeholder: "現在のパスワードを入力" %>
-      <small class="form-text text-muted">アカウント情報を変更する場合は入力</small>
-    </div>
-
     <div class="actions">
       <%= f.submit "変更を保存", class: "btn btn-primary" %>
     </div>
